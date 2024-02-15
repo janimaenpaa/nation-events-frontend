@@ -1,3 +1,5 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/ui/Header";
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
@@ -20,7 +22,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body className={`font-sans ${inter.variable}`}>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+        <main className="flex min-h-screen flex-col items-center">
+          <Header />
+          {children}
+        </main>
+      </ThemeProvider>
+      </body>
     </html>
   );
 }
