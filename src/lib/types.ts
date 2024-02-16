@@ -16,5 +16,6 @@ export type Nation = {
     startTime: string
     name: string
     url: string
+    id: number
   }
   
