@@ -11,15 +11,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import { getNationById } from "@/lib/utils";
 import { TooltipPortal } from "@radix-ui/react-tooltip";
+import { getNationById } from "@/lib/utils";
 
-interface FullCalendarTestProps {
+interface CalendarProps {
   events: Event[];
   nations: Nation[];
 }
 
-export default function Calendar({ events, nations }: FullCalendarTestProps) {
+export default function Calendar({ events, nations }: CalendarProps) {
   const router = useRouter();
 
   const eventsFormatted = events.map((event) => {
