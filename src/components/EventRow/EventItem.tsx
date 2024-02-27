@@ -21,7 +21,7 @@ export default function EventItem({ event, className }: EventItemProps) {
           href={`/event/${event.id}`}
           className="line-clamp-2 text-xs font-bold"
         >
-          {event.name}
+          {event.title}
         </Link>
       </div>
     </CarouselItem>

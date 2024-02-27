@@ -27,7 +27,6 @@ export default function Calendar({ events, nations }: CalendarProps) {
       ...event,
       start: new Date(event.startTime),
       end: new Date(event.endTime),
-      title: event.name,
       id: event.id.toString(),
       url: `/event/${event.id}`,
       allDay: true,
