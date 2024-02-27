@@ -17,5 +17,6 @@ export type Nation = {
     name: string
     url: string
     id: number
+    nationId: number
   }
   
