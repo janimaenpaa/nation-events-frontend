@@ -4,7 +4,7 @@ import { Event, Nation } from "./types";
 const API_URL = env.NEXT_PUBLIC_API_URL;
 
 export async function getEventsData(): Promise<Event[]> {
-  const response = await fetch(`${API_URL}/events`);
+  const response = await fetch(`${API_URL}/events`, { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error("Failed to fetch data");
