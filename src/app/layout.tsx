@@ -1,5 +1,5 @@
+import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/ui/Header";
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
@@ -30,7 +30,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
         <main className="flex min-h-screen flex-col items-center">
-          <Header />
+          <Header title="Nation Events" />
           {children}
         </main>
       </ThemeProvider>
